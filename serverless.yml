@@ -1,0 +1,18 @@
+service: happy-news
+
+provider:
+    name: aws
+    runtime: nodejs8.10
+    region: us-west-2
+    stage: ${opt:stage, 'dev'}
+    environment:
+        ACCOUNT_SID: ${file(creds.json):accountSID}
+        AUTH_TOKEN: ${file(creds.json):authToken}
+
+functions:
+    happyNews:
+        handler: index.handler
+        events:
+            - http:
+                path: sms
+                method: post
