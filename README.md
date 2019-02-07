@@ -5,7 +5,13 @@ Tired of seeing your feeds filled with sensationalist fear-mongering stories? Sh
 
 Get a free API key from [Twilio](https://www.twilio.com/) for sending automated text messages. Next, modify the creds.json file to include your account SID and authentication token. 
 
-Install serverless for easy deployment to an AWS CloudFormation stack:
+Install additional node dependencies with
+
+```
+npm install
+```
+
+and Serverless for easy deployment to an AWS CloudFormation stack using
 
 ```
 npm install -g serverless
