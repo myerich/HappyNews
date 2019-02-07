@@ -3,21 +3,23 @@ Tired of seeing your feeds filled with sensationalist fear-mongering stories? Sh
 
 ## How to set-up
 
-Get a free API key from [Twilio](https://www.twilio.com/) for sending automated text messages. Next, modify the creds.json file to include your account SID and authentication token. 
+Get a free API key from [Twilio](https://www.twilio.com/) for sending automated text messages. Next, modify the creds.json file to include your account SID and authentication token.
 
-Install additional node dependencies with
-
-```
-npm install
-```
-
-and Serverless for easy deployment to an AWS CloudFormation stack using
+Install Serverless for easy deployment to an AWS CloudFormation stack using
 
 ```
 npm install -g serverless
 ```
 
-Then from the HappyNews directory, use serverless to deploy the Lambda function over S3.
+Follow the instructions [here](https://serverless.com/framework/docs/providers/aws/guide/credentials/) to set up Serverless with your AWS credentials.
+
+Then from the HappyNews directory, install additional node dependencies with
+
+```
+npm install
+```
+
+and use Serverless to deploy the Lambda function over S3.
 
 ```
 serverless deploy
